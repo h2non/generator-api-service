@@ -1,0 +1,7 @@
+language: node_js
+node_js:
+  - '0.10'
+before_install:
+  - currentfolder=${PWD##*/}
+  - if [ "$currentfolder" != 'generator-api-service' ]; then cd .. && eval "mv $currentfolder generator-api-service" && cd generator-api-service; fi
+
