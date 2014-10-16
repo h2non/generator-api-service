@@ -55,7 +55,7 @@ var ApiServiceGenerator = yeoman.generators.Base.extend({
       this.dest.mkdir('features/support')
       this.dest.mkdir('features/step_definitions')
 
-      this.src.copy('bin/_service', 'bin/service')
+      this.src.copy('bin/_service', 'bin/' + this['package'])
       this.src.copy('features/step_definitions/_steps.js', 'features/step_definitions/steps.js')
       this.src.copy('features/support/_hooks.js', 'features/support/hooks.js')
       this.src.copy('features/support/_world.js', 'features/support/world.js')
@@ -77,9 +77,9 @@ var ApiServiceGenerator = yeoman.generators.Base.extend({
       this.src.copy('editorconfig', '.editorconfig')
       this.src.copy('jshintrc', '.jshintrc')
       this.src.copy('gitignore', '.gitignore')
-      this.src.copy('_Gruntfile.js', 'Gruntfile.js')
-      this.src.copy('_README.md', 'README.md')
-      this.src.copy('_package.json', 'package.json')
+      this.template('_Gruntfile.js', 'Gruntfile.js', this)
+      this.template('_README.md', 'README.md', this)
+      this.template('_package.json', 'package.json', this)
     }
   },
   end: function () {

@@ -1,12 +1,12 @@
 {
   "name": "generator-api-service",
   "version": "0.1.0",
-  "description": "Opinionated, general purpose, community driven conventions, HTTP API service generator",
+  "description": "Opinionated but community-driven convention-focused, general purpose, API server generator",
   "license": "MIT",
   "main": "app/index.js",
   "repository": "h2non/generator-api-service",
   "author": {
-    "name": "Tomás Aparicio",
+    "name": "Tomas Aparicio",
     "email": "tomas@aparicio.me",
     "url": "https://github.com/h2non"
   },
@@ -20,7 +20,15 @@
     "app"
   ],
   "keywords": [
-    "yeoman-generator"
+    "yeoman-generator",
+    "restify",
+    "http",
+    "api",
+    "service",
+    "https",
+    "restful",
+    "test",
+    "server"
   ],
   "dependencies": {
     "yeoman-generator": "^0.17.0",
