@@ -2,9 +2,11 @@
 
 > A [Yeoman](http://yeoman.io) generator
 
-Opinionated, general purpose, community driven conventions, HTTP API service generator 
+Opinionated but community driven conventioned, general purpose, HTTP API service generator 
 powered by [node.js](http://nodejs.org), [restify](http://mcavage.me/node-restify/), 
-[winston](https://github.com/flatiron/winston), [nar](https://github.com/h2non/nar) and more...
+[winston](https://github.com/flatiron/winston), [grunt](http://gruntjs.com), 
+[cucumber](https://github.com/cucumber/cucumber-js), [mocha](http://gruntjs.com), 
+[nar](https://github.com/h2non/nar) and more...
 
 ## Getting Started
 

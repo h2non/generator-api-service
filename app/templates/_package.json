@@ -25,7 +25,8 @@
     "restify": "^2.8.1",
     "winston": "^0.7.3",
     "lodash": "^2.4.1",
-    "bunyan-winston-adapter": "^0.2.0"
+    "bunyan-winston-adapter": "^0.2.0",
+    "grunt-contrib-jshint": "^0.10.0"
   },
   "devDependencies": {
     "chai": "^1.9.1",

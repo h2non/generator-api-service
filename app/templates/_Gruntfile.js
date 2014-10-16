@@ -29,6 +29,9 @@ module.exports = function (grunt) {
       },
       all: ['test/**/*.js']
     },
+    jshint: {
+      all: ['Gruntfile.js', '**/*.js']
+    },
     nar: {
       options: {
         executable: true,
