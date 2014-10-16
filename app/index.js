@@ -83,7 +83,7 @@ var ApiServiceGenerator = yeoman.generators.Base.extend({
     }
   },
   end: function () {
-    this.installDependencies()
+    // nothing
   }
 })
 
