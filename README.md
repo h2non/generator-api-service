@@ -1,11 +1,9 @@
 # generator-api-service [![Build Status](https://secure.travis-ci.org/h2non/generator-api-service.png?branch=master)](https://travis-ci.org/h2non/generator-api-service)
 
-> A [Yeoman](http://yeoman.io) generator
-
-Opinionated but community driven conventioned, general purpose, HTTP API service generator 
-powered by [node.js](http://nodejs.org), [restify](http://mcavage.me/node-restify/), 
+Opinionated but community-driven convention-focused, general purpose, API server [Yeoman](http://yeoman.io) generator 
+powered by [restify](http://mcavage.me/node-restify/), 
 [winston](https://github.com/flatiron/winston), [grunt](http://gruntjs.com), 
-[cucumber](https://github.com/cucumber/cucumber-js), [mocha](http://gruntjs.com), 
+[cucumber](https://github.com/cucumber/cucumber-js), [mocha](http://visionmedia.github.io/mocha/), 
 [nar](https://github.com/h2non/nar) and more...
 
 ## Getting Started
