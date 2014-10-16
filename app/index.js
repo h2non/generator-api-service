@@ -1,54 +1,53 @@
-'use strict';
-var util = require('util');
-var path = require('path');
-var yeoman = require('yeoman-generator');
-var yosay = require('yosay');
+'use strict'
+var util = require('util')
+var path = require('path')
+var yeoman = require('yeoman-generator')
+var yosay = require('yosay')
 
 var ApiServiceGenerator = yeoman.generators.Base.extend({
   initializing: function () {
-    this.pkg = require('../package.json');
+    this.pkg = require('../package.json')
   },
 
   prompting: function () {
-    var done = this.async();
+    var done = this.async()
 
     // Have Yeoman greet the user.
     this.log(yosay(
-      'Welcome to the groovy ApiService generator!'
-    ));
+      'Welcome to the node.js HTTP API service generator!'
+    ))
 
     var prompts = [{
       type: 'confirm',
       name: 'someOption',
       message: 'Would you like to enable this option?',
       default: true
-    }];
+    }]
 
     this.prompt(prompts, function (props) {
-      this.someOption = props.someOption;
-
-      done();
-    }.bind(this));
+      this.someOption = props.someOption
+      done()
+    }.bind(this))
   },
 
   writing: {
     app: function () {
-      this.dest.mkdir('app');
-      this.dest.mkdir('app/templates');
+      this.dest.mkdir('lib')
+      this.dest.mkdir('features/support')
+      this.dest.mkdir('features/step_definitions')
 
-      this.src.copy('_package.json', 'package.json');
-      this.src.copy('_bower.json', 'bower.json');
+      this.src.copy('_package.json', 'package.json')
+      this.src.copy('_bower.json', 'bower.json')
     },
 
     projectfiles: function () {
-      this.src.copy('editorconfig', '.editorconfig');
-      this.src.copy('jshintrc', '.jshintrc');
+      this.src.copy('editorconfig', '.editorconfig')
+      this.src.copy('jshintrc', '.jshintrc')
     }
   },
-
   end: function () {
-    this.installDependencies();
+    this.installDependencies()
   }
-});
+})
 
-module.exports = ApiServiceGenerator;
+module.exports = ApiServiceGenerator

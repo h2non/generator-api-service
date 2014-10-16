@@ -1,6 +1,6 @@
 # generator-api-service [![Build Status](https://secure.travis-ci.org/h2non/generator-api-service.png?branch=master)](https://travis-ci.org/h2non/generator-api-service)
 
-> [Yeoman](http://yeoman.io) generator
+> A [Yeoman](http://yeoman.io) generator
 
 ## Getting Started
 
@@ -38,9 +38,8 @@ yo api-service
 
 Yeoman has a heart of gold. He's a person with feelings and opinions, but he's very easy to work with. If you think he's too opinionated, he can be easily convinced.
 
-If you'd like to get to know Yeoman better and meet some of his friends, [Grunt](http://gruntjs.com) and [Bower](http://bower.io), check out the complete [Getting Started Guide](https://github.com/yeoman/yeoman/wiki/Getting-Started).
-
+If you'd like to get to know Yeoman better and meet some of his friends, [Grunt](http://gruntjs.com) and [Bower](http://bower.io), check out the complete [Getting Started Guide](https://github.com/yeoman/yeoman/wiki/Getting-Started)
 
 ## License
 
-MIT
+MIT - Tomas Aparicio

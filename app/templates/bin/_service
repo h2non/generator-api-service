@@ -1,0 +1,31 @@
+#!/usr/bin/env node
+'use strict'
+
+var service = require('../')
+var yargs = require('yargs')
+
+var argv = yargs
+  .usage('Start <%= package %> server.\nUsage: $0')
+  .example('$0 -h localhost -p 8080', '')
+  .describe('version', 'Show the server version')
+  .alias('version', 'v')
+  .alias('host', 'h')
+  .describe('host', 'Hostname to listen')
+  .default('host', '0.0.0.0')
+  .alias('port', 'p')
+  .describe('port', 'TCP port to listen')
+  .default('port', '8080')
+  .describe('basePath', 'Base path for all endpoints')
+  .describe('mock', 'Run server in mock version')
+  .default('mock', false)
+  .describe('debug', 'Debug mode')
+  .describe('silent', 'Disable verbose log mode')
+  .describe('help', 'Show help')
+  .argv
+
+if (argv.help) return echo(yargs.help())
+if (argv.version) return echo(templating.VERSION)
+
+process.env.DEBUG = (argv.debug ? '1' : process.env.DEBUG) || ''
+
+// your magic code starts here...

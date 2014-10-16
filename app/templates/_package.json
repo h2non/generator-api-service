@@ -1,7 +1,43 @@
 {
-  "name": "package",
+  "name": "<%= package %>",
+  "description": "<%= description %>",
   "version": "0.1.0",
+  "license": "<%= license %>",
+  "repository": "<%= repositoryUrl %>",
+  "main": "./lib/",
+  "engineStrict": true,
+  "directories": {
+    "lib": "./lib",
+    "bin": "./bin"
+  },
+  "bin": {
+    "<%= package %>": "./bin/<%= package %>"
+  },
+  "engines": {
+    "node": ">= 0.10.0"
+  },
+  "scripts": {
+    "start": "./bin/<%= package %>",
+    "test": "grunt test"
+  },
   "dependencies": {
-    "yargs": "^1.3.2"
+    "yargs": "^1.3.2",
+    "restify": "^2.8.1",
+    "winston": "^0.7.3",
+    "lodash": "^2.4.1",
+    "bunyan-winston-adapter": "^0.2.0"
+  },
+  "devDependencies": {
+    "chai": "^1.9.1",
+    "cucumber": "^0.4.1",
+    "grunt": "^0.4.5",
+    "grunt-contrib-clean": "^0.6.0",
+    "grunt-mocha-cli": "^1.10.0",
+    "grunt-nar": "^0.4.0",
+    "grunt-shell-spawn": "^0.3.0",
+    "grunt-stubby": "^0.1.4",
+    "load-grunt-tasks": "^0.6.0",
+    "mocha": "^1.20.1",
+    "request": "^2.45.1"
   }
 }
