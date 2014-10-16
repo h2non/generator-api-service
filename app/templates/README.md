@@ -1,6 +1,6 @@
 # <%= package %>
 
-An awesome service powered by node.js, restify, winston and more...
+An awesome service powered by node.js, restify, winston, [nar](https://github.com/h2non/nar) and more...
 
 ## Installation
 

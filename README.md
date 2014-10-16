@@ -2,6 +2,10 @@
 
 > A [Yeoman](http://yeoman.io) generator
 
+Opinionated, general purpose, community driven conventions, HTTP API service generator 
+powered by [node.js](http://nodejs.org), [restify](http://mcavage.me/node-restify/), 
+[winston](https://github.com/flatiron/winston), [nar](https://github.com/h2non/nar) and more...
+
 ## Getting Started
 
 ### What is Yeoman?
