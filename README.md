@@ -44,6 +44,10 @@ Yeoman has a heart of gold. He's a person with feelings and opinions, but he's v
 
 If you'd like to get to know Yeoman better and meet some of his friends, [Grunt](http://gruntjs.com) and [Bower](http://bower.io), check out the complete [Getting Started Guide](https://github.com/yeoman/yeoman/wiki/Getting-Started)
 
+## Contributors
+
+- [Tomas Aparicio](https://github.com/h2non)
+
 ## License
 
-MIT - Tomas Aparicio
+MIT - (C) 2014 Innotech 
