@@ -62,7 +62,6 @@ function defineMiddlewares(server) {
   restifyServer.use(restify.fullResponse())
   restifyServer.use(defineCORS)
   restifyServer.use(exposeServer(server))
-  //restify.use(trafficThrottle())
   restify.opts(/\.*/, function (req, res) { res.send(204) })
 }
 
@@ -75,17 +74,6 @@ function exposeServer(app) {
     res.server = server
     next()
   }
-}
-
-function trafficThrottle() {
-  return restify.throttle({
-    burst: 100,
-    rate: 25,
-    ip: true,
-    overrides: {
-      '127.0.0.1': { rate: 0, burst: 0 }
-    }
-  })
 }
 
 function defineCORS(req, res, next) {
