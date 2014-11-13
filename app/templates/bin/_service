@@ -24,7 +24,7 @@ var argv = yargs
   .argv
 
 if (argv.help) return echo(yargs.help())
-if (argv.version) return echo(templating.VERSION)
+if (argv.version) return echo(service.VERSION)
 
 process.env.DEBUG = (argv.debug ? '1' : process.env.DEBUG) || ''
 
