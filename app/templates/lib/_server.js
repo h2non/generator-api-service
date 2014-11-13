@@ -55,13 +55,13 @@ Server.prototype.stop = function () {
 }
 
 function defineMiddlewares(server) {
-  var restify = server.restify
-  restify.use(restify.bodyParser())
-  restify.use(restify.queryParser())
-  restify.use(restify.gzipResponse())
-  restify.use(restify.fullResponse())
-  restify.use(defineCORS)
-  restify.use(exposeServer(server))
+  var restifyServer = server.restify
+  restifyServer.use(restify.bodyParser())
+  restifyServer.use(restify.queryParser())
+  restifyServer.use(restify.gzipResponse())
+  restifyServer.use(restify.fullResponse())
+  restifyServer.use(defineCORS)
+  restifyServer.use(exposeServer(server))
   //restify.use(trafficThrottle())
   restify.opts(/\.*/, function (req, res) { res.send(204) })
 }
