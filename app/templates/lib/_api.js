@@ -1,8 +1,8 @@
 var controllers = require('./controllers')
 
-module.exports = function (server) {
+module.exports = function (app) {
   // define the API endpoints
-  server.get(server.options.basePath + '/heartbeat', controllers.heartbeat)
-  server.get(server.options.basePath + '/test', controllers.test)
-  server.post(server.options.basePath + '/test', controllers.test)
+  app.server.get(app.options.basePath + '/heartbeat', controllers.heartbeat)
+  app.server.get(app.options.basePath + '/test', controllers.test)
+  app.server.post(app.options.basePath + '/test', controllers.test)
 }

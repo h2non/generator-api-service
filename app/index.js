@@ -69,7 +69,6 @@ var ApiServiceGenerator = yeoman.generators.Base.extend({
       this.src.copy('lib/controllers/_heartbeat.js', 'lib/controllers/heartbeat.js')
       this.src.copy('lib/controllers/_index.js', 'lib/controllers/index.js')
       this.src.copy('lib/controllers/_test.js', 'lib/controllers/test.js')
-
       this.src.copy('test/_server.js', 'test/server.js')
     },
 

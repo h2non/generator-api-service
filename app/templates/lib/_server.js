@@ -12,13 +12,12 @@ module.exports = function (options) {
 }
 
 function Server(options) {
-  this.options = _.merge({}, this.options, options)
-  this.start()
+  this.options = _.merge({}, this.defaults, options)
 }
 
-util.inherits(Server, EventEmitter)
+Server.prototype = Object.create(EventEmitter.prototype)
 
-Server.prototype.options = {
+Server.prototype.defaults = {
   host: '0.0.0.0',
   port: 8080,
   mock: false,
@@ -37,38 +36,41 @@ Server.prototype.start = function () {
 }
 
 Server.prototype._createServer = function () {
-  this.server = restify.createServer({
+  var server = this.restify = restify.createServer({
     name: pkg.name,
     version: pkg.version,
     log: winstonAdapter.createAdapter(winston),
   })
 
-  this.defineEndpoints()
-  this.server.listen(this.options.port, function () {
+  defineEndpoints(this)
+  defineMiddlewares(this)
+
+  server.listen(this.options.port, function () {
     this.emit('ready', this.options)
   }.bind(this))
 }
 
-Server.prototype.defineMiddlewares = function () {
-  this.server.use(restify.bodyParser())
-  this.server.use(restify.queryParser())
-  this.server.use(restify.gzipResponse())
-  this.server.use(restify.fullResponse())
-  this.server.use(defineCORS)
-  this.server.use(trafficThrottle())
-  this.server.use(exposeServer(this))
-  this.server.opts(/\.*/, function (req, res) { res.send(204) })
-  //if (this.options.verbose) this.server.use(verboseLog)
-}
-
-Server.prototype.defineEndpoints = function () {
-  api(this.server)
-}
-
 Server.prototype.stop = function () {
-  this.server.close(function () {
+  this.restify.close(function () {
     this.emit('close')
   }.bind(this))
+}
+
+function defineMiddlewares(server) {
+  var restify = server.restify
+  restify.use(restify.bodyParser())
+  restify.use(restify.queryParser())
+  restify.use(restify.gzipResponse())
+  restify.use(restify.fullResponse())
+  restify.use(defineCORS)
+  restify.use(exposeServer(server))
+  //restify.use(trafficThrottle())
+  restify.opts(/\.*/, function (req, res) { res.send(204) })
+  if (server.options.verbose) restify.use(verboseLog)
+}
+
+function defineEndpoints(server) {
+  api(server)
 }
 
 function exposeServer(app) {

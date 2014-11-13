@@ -8,12 +8,7 @@ var request = require('request')
 module.exports = Client
 
 function Client(options) {
-  this.setOptions(options)
-}
-
-Client.prototype.defaults = {
-  method: 'GET',
-  headers: null
+  this.defineOptions(options)
 }
 
 Client.prototype.send = function (options, cb, method) {
@@ -47,10 +42,7 @@ Client.prototype.head = function (options, cb) {
   return this.send(options, cb, 'HEAD')
 }
 
-Client.prototype.setOptions = function (options) {
-  this.options = optionsMerge(this.defaults, options)
+Client.prototype.defineOptions = function (options) {
+  this.options = _.cloneDeep(options)
 }
 
-function optionsMerge(defaults, options) {
-  return _.merge(_.clone(defaults), options)
-}
