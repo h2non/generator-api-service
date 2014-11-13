@@ -20,9 +20,7 @@ Server.prototype = Object.create(EventEmitter.prototype)
 Server.prototype.defaults = {
   host: '0.0.0.0',
   port: 8080,
-  mock: false,
   debug: false,
-  verbose: true,
   basePath: '/api'
 }
 
@@ -66,7 +64,6 @@ function defineMiddlewares(server) {
   restify.use(exposeServer(server))
   //restify.use(trafficThrottle())
   restify.opts(/\.*/, function (req, res) { res.send(204) })
-  if (server.options.verbose) restify.use(verboseLog)
 }
 
 function defineEndpoints(server) {
