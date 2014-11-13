@@ -7,7 +7,7 @@ var EventEmitter = require('events').EventEmitter
 var pkg = require('../package.json')
 var api = require('./api')
 
-module.exports = function (options) {
+module.exports = function serverFactory(options) {
   return new Server(options)
 }
 
