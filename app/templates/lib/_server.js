@@ -16,7 +16,7 @@ function Server(options) {
   this.start()
 }
 
-util.inherits(Server, EventEmitter)
+Server.protototype = Object.create(EventEmitter.prototype)
 
 Server.prototype.options = {
   host: '0.0.0.0',
