@@ -1,4 +1,4 @@
-# generator-api-service [![Build Status](https://secure.travis-ci.org/h2non/generator-api-service.png?branch=master)](https://travis-ci.org/h2non/generator-api-service)
+# generator-api-service [![Build Status](https://secure.travis-ci.org/h2non/generator-api-service.png?branch=master)](https://travis-ci.org/innotech/generator-api-service)
 
 Opinionated but community-driven convention-focused, general purpose, API server [Yeoman](http://yeoman.io) generator 
 powered by [restify](http://mcavage.me/node-restify/), 
