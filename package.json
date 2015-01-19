@@ -1,7 +1,7 @@
 {
   "name": "generator-api-service",
   "version": "0.1.3",
-  "description": "Opinionated but community-driven convention-focused, general purpose, RESTful API server Yeoman generator",
+  "description": "A Yeoman generator to build an opinionated but community-driven convention-focused, general purpose, RESTful HTTP node.js server",
   "license": "MIT",
   "main": "app/",
   "repository": "innotech/generator-api-service",
