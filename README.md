@@ -3,7 +3,7 @@
 Opinionated but community-driven convention-focused, general purpose, API server [Yeoman](http://yeoman.io) generator 
 powered by [restify](http://mcavage.me/node-restify/), 
 [winston](https://github.com/flatiron/winston), [grunt](http://gruntjs.com), 
-[cucumber](https://github.com/cucumber/cucumber-js), [mocha](http://visionmedia.github.io/mocha/), 
+[cucumber](https://github.com/cucumber/cucumber-js), [mocha](http://mochajs.org/), 
 [nar](https://github.com/h2non/nar) and more...
 
 ## Getting Started
